@@ -1,37 +1,49 @@
-## SetUp
+## Setup for local development
+Instructions to set up and run the application locally. Include any prerequisites, dependencies, and steps for running the project.
 
-### Deployment
+1. **Prerequisites**: Ensure you have Node.js and npm installed.
 
+2. **Clone the Repository**:
+   ```bash
+   https://github.com/pavanh007/book-shelf.git
+   ```
+   
 Install dependencies with:
 
-```
-npm install
-```
-
-and then deploy with:
-
-```
-serverless deploy
-```
-
-
-_Note_: In current form, after deployment, your API is public and can be invoked by anyone. For production deployments, you might want to configure an authorizer. For details on how to do that, refer to [`httpApi` event docs](https://www.serverless.com/framework/docs/providers/aws/events/http-api/).
-
-
-### Local development
-
-It is also possible to emulate API Gateway and Lambda locally by using `serverless-offline` plugin. In order to do that, execute the following command:
-
 ```bash
-serverless plugin install -n serverless-offline
+  npm install
 ```
 
-It will add the `serverless-offline` plugin to `devDependencies` in `package.json` file as well as will add it to `plugins` in `serverless.yml`.
-
-After installation, you can start local emulation with:
+and then to start with:
 
 ```
-serverless offline
+npm start
 ```
 
-To learn more about the capabilities of `serverless-offline`, please refer to its [GitHub repository](https://github.com/dherault/serverless-offline).
+
+To learn more about the capabilities of `book-shelf-node` project, please refer to its [GitHub repository](https://github.com/pavanh007/book-shelf).
+
+
+## Table of Contents
+
+- [API Endpoints](#api-endpoints)
+- [Setup Instructions](#setup-instructions)
+
+## API Endpoints
+
+ - [http://localhost:3000](#api-endpoints) : localhost URL
+
+Provide an overview of the API endpoints and how to use them. You can use tables or lists to present this information.
+
+| Endpoint               | Method | Description       |
+|------------------------|--------|-------------------|
+| `/v1/book/add-book`       | POST   | add the book      |
+| `/v1/book/books`       | GET    | get list of books | 
+| `/v1/book/book-details/:bookId`   | GET    | get book by Id    |
+| `/v1/book/delete-book/:bookId`   | DELETE | delete book by Id |
+| `/v1/book/update-book/:bookId`   | PUT    | update book by Id |
+
+You can provide detailed information about each endpoint, request and response formats requirement.
+
+HERE I attached the POSTMAN API collection:   [API collection](#https://github.com/pavanh007/book-shelf/blob/main/bookShelf.postman_collection.json) to run in local environment. 
+
