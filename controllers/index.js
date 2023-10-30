@@ -1,0 +1,1 @@
+export {handleBookById, handleDeleteBook, handleGetBooks, handleInsertBooks, handleUpdateBookDetails} from "./v1/bookController.js"
