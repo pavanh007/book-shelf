@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "23b6a9cc-9689-4b5b-9001-b87bb65dbea6",
+		"name": "bookShelf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28617750"
+	},
+	"item": [
+		{
+			"name": "add-book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"title-4\", \"author\": \"your name\", \"summary\": \"summary of the book 4\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/book/add-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"book",
+						"add-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/book/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"book",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books by bookId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/book/book-details/:bookId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"book",
+						"book-details",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "653f615eee3dd1f9e1dd045f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-book by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/book/delete-book/:bookId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"book",
+						"delete-book",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "653f615eee3dd1f9e1dd045f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-book by bookId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"title-8\", \"author\": \"your name\", \"summary\": \"summary of the book 8\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/book/update-book/:bookId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"book",
+						"update-book",
+						":bookId"
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "653f6172ee3dd1f9e1dd0463"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
